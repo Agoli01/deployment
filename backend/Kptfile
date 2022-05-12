@@ -1,0 +1,21 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata:
+  name: backend
+  annotations:
+    config.kubernetes.io/local-config: "true"
+upstream:
+  type: git
+  git:
+    repo: https://github.com/Agoli01/blueprint.git
+    directory: new-package
+    ref: v1
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/Agoli01/blueprint.git
+    directory: new-package
+    ref: v1
+    commit: a80aae50467ad80e67007112f63cf0ea8414a96b
+info:
+  description: sample description
